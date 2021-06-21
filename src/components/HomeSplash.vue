@@ -1,33 +1,26 @@
 <template>
   <div class="homesplash">
 
-    <div class="row justify-content-center">
-      <router-link to="/HorsePoweredReading">
-        <h4>Horse Powered Reading</h4>
-      </router-link>
-    </div>
-    <div class="row justify-content-center">
-      <router-link to="/BuckysSoap">
-        <h4>Bucky's Soap</h4>
-      </router-link>
 
+    <div class="row justify-content-around">
+      <CardLink msg="Horse Powered Reading" linkTo="/HorsePoweredReading" image="https://place-hold.it/300x500">
+      </CardLink>
+      <CardLink msg="Bucky's Soap" linkTo="/BuckysSoap" image="https://place-hold.it/300x500"></CardLink>
+      <CardLink msg="Barn Art" linkTo="/BarnArt" image="https://place-hold.it/300x500"></CardLink>
+      <CardLink msg="Our Team" linkTo="/OurTeam" image="https://place-hold.it/300x500"></CardLink>
     </div>
-    <div class="row justify-content-center">
-      <router-link to="/BarnArt">
-        <h4>Barn Art</h4>
-      </router-link>
 
-    </div>
-    <div class="row justify-content-center">
-      <router-link to="/OurTeam">
-        <h4>Our Team</h4>
-      </router-link>
-    </div>
+
   </div>
 </template>
 
 <script>
+  import CardLink from '@/components/CardLink.vue'
+
   export default {
     name: 'HomeSplash',
+    components: {
+      CardLink
+    }
   }
 </script>
